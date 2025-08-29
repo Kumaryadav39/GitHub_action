@@ -1,6 +1,6 @@
 name: github_action
 description: A Flutter package demonstrating how to automate publishing to pub.dev using GitHub Actions, with workflows for testing and CI/CD.
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/<your-username>/github_action
 repository: https://github.com/<your-username>/github_action
 issue_tracker: https://github.com/<your-username>/github_action/issues
