@@ -18,7 +18,7 @@ jobs:
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: "3.24.3" # ✅ Pin to stable version
+          flutter-version: "3.24.3"
 
       # Install dependencies
       - name: Install dependencies
@@ -31,10 +31,10 @@ jobs:
       # Prepare pub.dev credentials from GitHub Secret
       - name: Prepare pub.dev credentials
         run: |
-          mkdir -p $XDG_CONFIG_HOME/dart
-          echo "${{ secrets.PUB_CREDENTIALS }}" > $XDG_CONFIG_HOME/dart/pub-credentials.json
+          mkdir -p $HOME/.config/dart
+          echo '${{ secrets.PUB_CREDENTIALS }}' > $HOME/.config/dart/pub-credentials.json
 
-      # Do a dry-run publish (sanity check)
+      # Dry-run publish (sanity check)
       - name: Dry-run publish
         run: flutter pub publish --dry-run
 
